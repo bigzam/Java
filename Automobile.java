@@ -67,14 +67,14 @@ public class Automobile {
     		//display �Please pay XX.XX dollars for X.XX gallons.�  to add to full gas tank?????
     		if(canBuyGallons < emptyFuelLevel) {
     			
-    			   			
+				setFuelLevel(getFuelLevel() + canBuyGallons);
     			System.out.println("Please pay $"+ GAS_PRICE * emptyFuelLevel + " for " + emptyFuelLevel);
     		}
     		if (canBuyGallons >= emptyFuelLevel){
     			 double payForGas = emptyFuelLevel*GAS_PRICE;
     			 double change = dollarAmount - payForGas;
-    				
-    				System.out.println("Please pay "+dollarAmount+" dollars for "+canBuyGallons+" gallons. Your change is "+ change+" dollars");
+				 setFuelLevel(FUEL_TANK_SIZE);
+    			 System.out.println("Please pay "+dollarAmount+" dollars for "+canBuyGallons+" gallons. Your change is "+ change+" dollars");
     		}
     			}   
 	public static void main(String[] args) {
